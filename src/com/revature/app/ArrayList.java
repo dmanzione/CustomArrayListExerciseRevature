@@ -9,6 +9,10 @@ public class ArrayList<T> {
 		internalArray = new Object[10];
 		count = 0;
 	}
+	
+	public ArrayList(int size) {
+		internalArray = new Object[size];
+	}
 
 	public void add(T el) {
 
