@@ -3,11 +3,11 @@ package com.revature.app;
 public class ArrayList<T> {
 
 	private Object[] internalArray;
-	private int count;
+	private int counter;
 
 	public ArrayList() {
 		internalArray = new Object[10];
-		count = 0;
+		counter = 0;
 	}
 	
 	public ArrayList(int size) {
@@ -16,13 +16,13 @@ public class ArrayList<T> {
 
 	public void add(T el) {
 
-		if (count > internalArray.length - 1) {
+		if (counter > internalArray.length - 1) {
 			
 			resize();
 			
 		} 
-		internalArray[count] = el;
-		count++;
+		internalArray[counter] = el;
+		counter++;
 
 	}
 	
@@ -33,7 +33,7 @@ public class ArrayList<T> {
 			newArray[i] = internalArray[i];
 
 		}
-		count = internalArray.length;
+		counter = internalArray.length;
 		
 		internalArray = newArray;
 	}
@@ -41,6 +41,10 @@ public class ArrayList<T> {
 	public T get(int index) {
 
 		return (T)internalArray[index];
+	}
+	
+	public int getSize() {
+		return counter;
 	}
 
 	public void replace(int index, T newThing) {
