@@ -3,34 +3,40 @@ package com.revature.app;
 public class ArrayList<T> {
 
 	private Object[] internalArray;
-	private int lastIndex;
+	private int count;
 
 	public ArrayList() {
 		internalArray = new Object[10];
-		lastIndex = 0;
+		count = 0;
 	}
 
 	public void add(T el) {
 
-		if (lastIndex <= internalArray.length - 1) {
-			internalArray[lastIndex] = el;
-			lastIndex++;
-		} else {
-			Object[] newArray = new Object[internalArray.length + 1];
-			for (int i = 0; i < internalArray.length; i++) {
-				newArray[i] = internalArray[i];
+		if (count > internalArray.length - 1) {
+			
+			resize();
+			
+		} 
+		internalArray[count] = el;
+		count++;
 
-			}
-			lastIndex = internalArray.length;
-			newArray[lastIndex] = el;
-			lastIndex++;
-			internalArray = newArray;
+	}
+	
+	private void resize() {
+		
+		Object[] newArray = new Object[internalArray.length + 1];
+		for (int i = 0; i < internalArray.length; i++) {
+			newArray[i] = internalArray[i];
+
 		}
-
+		count = internalArray.length;
+		
+		internalArray = newArray;
 	}
 
 	public T get(int index) {
-		return (T) internalArray[index];
+
+		return (T)internalArray[index];
 	}
 
 	public void replace(int index, T newThing) {
