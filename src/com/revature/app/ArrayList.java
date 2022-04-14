@@ -37,10 +37,6 @@ public class ArrayList<T> {
 		internalArray[index] = newThing;
 	}
 
-	public void print() {
-		System.out.println(this);
-	}
-
 	@Override
 	public String toString() {
 		String elementsInArrayList = "Elements: \n\t[\n";
@@ -49,6 +45,8 @@ public class ArrayList<T> {
 
 		}
 		elementsInArrayList += "\t]";
+
+		System.out.println(elementsInArrayList);
 		return elementsInArrayList;
 	}
 

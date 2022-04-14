@@ -19,10 +19,30 @@ public class Driver {
 		myArrayList.add("hello11");
 		
 		
+		
 		myArrayList.replace(6, "goodbye7");
-		myArrayList.print();
+		myArrayList.toString();
 
 		System.out.println(myArrayList.get(10));
+		
+		
+		
+		ArrayList<Integer> myArrayList2 = new ArrayList<>();
+		myArrayList2.add(1);
+		myArrayList2.add(2);
+		myArrayList2.add(3);
+		myArrayList2.add(1);
+		myArrayList2.add(2);
+		myArrayList2.add(3);
+		myArrayList2.add(1);
+		myArrayList2.add(2);
+		myArrayList2.add(3);
+		myArrayList2.add(1);
+		myArrayList2.add(2);
+		myArrayList2.add(3);
+		
+		myArrayList2.toString();
+		
 		
 	}
 
