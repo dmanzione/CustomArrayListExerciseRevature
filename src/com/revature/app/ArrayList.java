@@ -2,7 +2,7 @@ package com.revature.app;
 
 public class ArrayList<T> {
 
-	public Object[] internalArray;
+	private Object[] internalArray;
 	private int lastIndex;
 
 	public ArrayList() {
